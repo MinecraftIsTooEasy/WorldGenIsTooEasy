@@ -1,0 +1,19 @@
+{
+	"schemaVersion": 1,
+	"id": "rwg",
+	"version": "${version}",
+	"depends": {
+		"fishmodloader": ">=3.2.1"
+	},
+	"environment": "*",
+	"name": "World Gen Is Too Easy",
+	"description": "",
+	"authors": ["Tesseract"],
+	"entrypoints": {
+		"main": ["rwg.Main"]
+	},
+	"mixins": [
+		"rwg.mixins.json"
+	],
+	"accessWidener": "rwg.accesswidener"
+}
