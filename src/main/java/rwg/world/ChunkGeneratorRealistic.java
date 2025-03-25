@@ -68,7 +68,7 @@ public class ChunkGeneratorRealistic implements IChunkProvider {
         mapRand = new Random(l);
         worldSeed = l;
 
-        caves = new MapGenCaves2();
+        caves = new WorleyCavesGenerator(l);
         Map m = new HashMap();
         m.put("size", "0");
         m.put("distance", "24");
