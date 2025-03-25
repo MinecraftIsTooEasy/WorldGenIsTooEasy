@@ -29,7 +29,7 @@ public class RealisticBiomeMesa extends RealisticBiomeBase {
         super(0, RWGBaseBiomes.baseHotDesert, RWGBiomes.coastDunes, RWGBaseBiomes.baseRiverOasis);
 
         terrain = new TerrainMesa();
-        surface = new SurfaceMesa(Block.gravel, Block.gravel, (byte) 2);
+        surface = new SurfaceMesa(Block.sand, Block.sand, (byte) 1);
         riverSurface = new SurfaceRiverOasis();
     }
 

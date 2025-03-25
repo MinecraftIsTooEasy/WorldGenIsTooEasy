@@ -1,14 +1,15 @@
 {
-	"required": true,
-	"package": "rwg.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"target": "DEFAULT",
-	"minVersion": "0.8.3",
-	"mixins": [
-		"WorldProviderMixin",
-		"WorldSeverMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "rwg.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "target": "DEFAULT",
+  "minVersion": "0.8.3",
+  "mixins": [
+    "BlockSandMixin",
+    "WorldProviderMixin",
+    "WorldSeverMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

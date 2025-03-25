@@ -24,7 +24,7 @@ public class RealisticBiomeCanyon extends RealisticBiomeBase {
         super(0, RWGBaseBiomes.baseHotPlains, RWGBiomes.coastDunes, RWGBaseBiomes.baseRiverOasis);
 
         terrain = new TerrainCanyon(true, 35f, 160f, 60f, 40f, 69f);
-        surface = new SurfaceCanyon(Block.gravel, Block.gravel, (byte) 2, 0);
+        surface = new SurfaceCanyon(Block.sand, Block.sand, (byte) 1, 0);
     }
 
     @Override

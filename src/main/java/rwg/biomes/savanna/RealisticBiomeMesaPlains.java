@@ -27,7 +27,7 @@ public class RealisticBiomeMesaPlains extends RealisticBiomeBase {
         super(0, RWGBaseBiomes.baseHotPlains, RWGBiomes.coastDunes, RWGBaseBiomes.baseRiverHot);
 
         terrain = new TerrainMesa();
-        surface = new SurfaceCanyon(Block.gravel, Block.gravel, (byte) 2, 20);
+        surface = new SurfaceCanyon(Block.sand, Block.sand, (byte) 1, 20);
     }
 
     @Override
