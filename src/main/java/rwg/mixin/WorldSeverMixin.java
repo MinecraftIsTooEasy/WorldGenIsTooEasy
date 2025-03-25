@@ -36,6 +36,5 @@ public abstract class WorldSeverMixin extends World {
     @Inject(method = "isCaveNetworkAt", at = @At("HEAD"), cancellable = true)
     private void isCaveNetworkAt(int x, int z, CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(getCaveNetworkStubAt(x >> 4, z >> 4) != null);
-        ;
     }
 }

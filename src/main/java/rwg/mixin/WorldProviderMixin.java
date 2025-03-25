@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import rwg.Main;
 import rwg.world.ChunkGeneratorRealistic;
 import rwg.world.ChunkManagerRealistic;
 
@@ -23,11 +24,13 @@ public class WorldProviderMixin {
 
     @Inject(method = "createChunkGenerator", at = @At("HEAD"), cancellable = true)
     private void createChunkGenerator(CallbackInfoReturnable<IChunkProvider> cir) {
-        cir.setReturnValue(new ChunkGeneratorRealistic(worldObj, worldObj.getSeed()));
+        if (worldObj.getWorldInfo().getTerrainType() == Main.RWG)
+            cir.setReturnValue(new ChunkGeneratorRealistic(worldObj, worldObj.getSeed()));
     }
 
     @Inject(method = "registerWorldChunkManager", at = @At("TAIL"))
     private void registerWorldChunkManager(CallbackInfo ci) {
-        this.worldChunkMgr = new ChunkManagerRealistic(worldObj);
+        if (worldObj.getWorldInfo().getTerrainType() == Main.RWG)
+            this.worldChunkMgr = new ChunkManagerRealistic(worldObj);
     }
 }
